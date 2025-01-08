@@ -1,8 +1,5 @@
 //  MAnual JS for Launch Page - AgyaAujla
 
-
-
-
 // document.onreadystatechange = function () {
 //     if (document.readyState !== "complete") {
 //         document.querySelector(".loader-container").style.visibility =
@@ -27,23 +24,23 @@
 //       }
 //   };
 
-
 document.onreadystatechange = function () {
-    if (document.readyState !== "complete") {
-      // Show loader and hide launch pages
-      document.querySelector(".loader-container").style.visibility = "visible";
-      document.querySelector(".launch-page-container").style.visibility = "hidden";
-      document.querySelector(".launch-page-container_m").style.visibility = "hidden";
-    } else {
-      // Hide loader and show launch pages
-      document.querySelector(".loader-container").style.display = "none";
-      document.querySelector(".launch-page-container").style.visibility = "visible";
-      document.querySelector(".launch-page-container_m").style.visibility = "visible";
-    }
-  };
-  
-
-
+  if (document.readyState !== "complete") {
+    // Show loader and hide launch pages
+    document.querySelector(".loader-container").style.visibility = "visible";
+    document.querySelector(".launch-page-container").style.visibility =
+      "hidden";
+    document.querySelector(".launch-page-container_m").style.visibility =
+      "hidden";
+  } else {
+    // Hide loader and show launch pages
+    document.querySelector(".loader-container").style.display = "none";
+    document.querySelector(".launch-page-container").style.visibility =
+      "visible";
+    document.querySelector(".launch-page-container_m").style.visibility =
+      "visible";
+  }
+};
 
 // DESKTOP       ===================================================================================================================================================
 
@@ -168,7 +165,7 @@ function startAnimation() {
       start: "top 90%",
       end: "top 20%",
       scrub: 1,
-    //   markers: true,
+      //   markers: true,
     },
   });
 
@@ -180,7 +177,7 @@ function startAnimation() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-    //   markers: true
+      //   markers: true
     },
   });
 
@@ -192,7 +189,19 @@ function startAnimation() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-    //   markers: true
+      //   markers: true
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const rightTitle = document.querySelector(".right-title h1");
+        if (rightTitle) {
+          if (progress > 0.5) {
+            rightTitle.innerText = "NO"; // When progress is halfway or beyond
+          } else {
+            rightTitle.innerText = "NE?"; // Reset to original text before halfway
+          }
+        }
+      },
     },
   });
 
@@ -234,17 +243,16 @@ tl_product_ingredient.from(".ingrdient-card", {
   },
 });
 
-
 gsap.from(".pre-order", {
-    opacity: 0,
-    zIndex: -1,
-    scrollTrigger: {
-      trigger: ".product-image ",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-    },
-  });
+  opacity: 0,
+  zIndex: -1,
+  scrollTrigger: {
+    trigger: ".product-image ",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+  },
+});
 
 gsap.to(".explore", {
   opacity: 0,
@@ -399,7 +407,7 @@ function startAnimation_m() {
   });
 
   tl_product_title_m.to(".left-title_m", {
-    x: "-20vw",
+    x: "-25vw",
     ease: "power1.out",
     fontSize: "28px",
     scrollTrigger: {
@@ -407,12 +415,12 @@ function startAnimation_m() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-      markers: true
+    //   markers: true,
     },
   });
 
   tl_product_title_m.to(".right-title_m", {
-    x: "+20vw",
+    x: "+25vw",
     ease: "power1.out",
     fontSize: "28px",
     scrollTrigger: {
@@ -420,9 +428,37 @@ function startAnimation_m() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-      markers: true
+    //   markers: true,
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const rightTitle = document.querySelector(".right-title_m h1");
+        if (rightTitle) {
+          if (progress > 0.5) {
+            rightTitle.innerText = "NO!"; // When progress is halfway or beyond
+          } else {
+            rightTitle.innerText = "NE?"; // Reset to original text before halfway
+          }
+        }
+      },
     },
   });
+
+
+
+//   tl_product_title_m.to("#animated-title_m ", {
+ 
+//     // ease: "power1.out",
+//     fontSize: "50px",
+//     scrollTrigger: {
+//       trigger: ".product-image_m",
+//       start: "top 45%",
+//       end: "top 30%",
+//       scrub: 1,
+//       markers: true,
+//     },
+//   });
+
 
   tl_product_title_m.to(frames_m, {
     currentIndex: frames_m.maxIndex,
@@ -522,42 +558,37 @@ gsap.to(".explore_m", {
 //   });
 // });
 
-
-
-
-
-
-new Swiper('.card-wrapper', {
+new Swiper(".card-wrapper", {
   loop: true,
   spaceBetween: 30,
   autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   // Pagination bullets
   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
 
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // Responsive breakpoints
   breakpoints: {
-      0: {
-          slidesPerView: 1
-      },
-      768: {
-          slidesPerView: 2
-      },
-      1024: {
-          slidesPerView: 3
-      }
-  }
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });

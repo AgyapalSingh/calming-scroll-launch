@@ -405,7 +405,7 @@ canvas {
 }
 
 .left-title_m{
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 50%;
   position: fixed;
   height: 100%;
@@ -415,7 +415,7 @@ canvas {
 }
 
 .right-title_m{
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 50%;
   position: fixed;
   height: 100%;
@@ -431,10 +431,10 @@ canvas {
   /* position: fixed; */
   /* transform: translate(-50%, -50%); */
   font-family: "Poppins", sans-serif;
-  font-size: 28px;
+  font-size: 5vh;
   transition: font-size 0.3s ease;
   color: #183457;
-  border: 1px solid #183457;
+  /* border: 1px solid #183457; */
 }
 
 /* 2. Product Image and Benefits */
