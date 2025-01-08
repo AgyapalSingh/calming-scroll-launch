@@ -431,7 +431,7 @@ canvas {
   /* position: fixed; */
   /* transform: translate(-50%, -50%); */
   font-family: "Poppins", sans-serif;
-  font-size: 5vh;
+  font-size: 10vh;
   transition: font-size 0.3s ease;
   color: #183457;
   /* border: 1px solid #183457; */

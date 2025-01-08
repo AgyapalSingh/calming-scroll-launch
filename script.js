@@ -415,7 +415,21 @@ function startAnimation_m() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-    //   markers: true,
+      //   markers: true,
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const leftTitle = document.querySelector(".left-title_m h1");
+        if (leftTitle) {
+          
+
+          const minFontSize = 5; // Minimum font size in vh
+          const maxFontSize = 10; // Maximum font size in vh
+          const newFontSize =
+            maxFontSize - progress * (maxFontSize - minFontSize);
+          leftTitle.style.fontSize = `${newFontSize}vh`;
+        }
+      },
     },
   });
 
@@ -428,7 +442,7 @@ function startAnimation_m() {
       start: "top 45%",
       end: "top 30%",
       scrub: 1,
-    //   markers: true,
+      //   markers: true,
 
       onUpdate: (self) => {
         const progress = self.progress;
@@ -439,26 +453,29 @@ function startAnimation_m() {
           } else {
             rightTitle.innerText = "NE?"; // Reset to original text before halfway
           }
+
+          const minFontSize = 5; // Minimum font size in vh
+          const maxFontSize = 10; // Maximum font size in vh
+          const newFontSize =
+            maxFontSize - progress * (maxFontSize - minFontSize);
+          rightTitle.style.fontSize = `${newFontSize}vh`;
         }
       },
     },
   });
 
+  //   tl_product_title_m.to("#animated-title_m ", {
 
-
-//   tl_product_title_m.to("#animated-title_m ", {
- 
-//     // ease: "power1.out",
-//     fontSize: "50px",
-//     scrollTrigger: {
-//       trigger: ".product-image_m",
-//       start: "top 45%",
-//       end: "top 30%",
-//       scrub: 1,
-//       markers: true,
-//     },
-//   });
-
+  //     // ease: "power1.out",
+  //     fontSize: "50px",
+  //     scrollTrigger: {
+  //       trigger: ".product-image_m",
+  //       start: "top 45%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //       markers: true,
+  //     },
+  //   });
 
   tl_product_title_m.to(frames_m, {
     currentIndex: frames_m.maxIndex,
