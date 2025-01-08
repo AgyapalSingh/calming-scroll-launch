@@ -1,0 +1,812 @@
+/* Launch Page CSS  */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* font-family: "Poppins", sans-serif; */
+
+/* @media screen and (max-width: 767px) {
+  .launch-page-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .launch-page-container_m {
+    display: none;
+  }
+} */
+
+/* @media screen and (max-width: 992px) {
+  .launch-page-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 993px) {
+  .launch-page-container_m {
+    display: none;
+  }
+} */
+
+.loader-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #183457;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #183457;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .launch-page-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .launch-page-container_m {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* DESKTOP ***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
+
+/* Parent Container */
+.launch-page-container {
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Color-03.png?v=1735888470);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+/* 1. Title Div */
+.product-title {
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-title{
+  border: 1px solid green;
+  width: 50%;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  justify-content:right;
+  align-items: center;
+}
+
+.right-title{
+  border: 1px solid green;
+  width: 50%;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  left: 50%;
+  justify-content:left;
+  align-items: center;
+}
+
+#animated-title{
+  font-weight: bold;
+  margin: 0;
+  /* position: fixed; */
+  /* transform: translate(-50%, -50%); */
+  font-family: "Poppins", sans-serif;
+  font-size: 15vh;
+  transition: font-size 0.3s ease;
+  color: #183457;
+  border: 1px solid #183457;
+}
+
+/* Animated Tittle */
+/* #animated-title-1 {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 15vh;
+  transition: font-size 0.3s ease;
+  color: #183457;
+  border: 1px solid #183457;
+}
+
+#animated-title-2 {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 15vh;
+  transition: font-size 0.3s ease;
+  color: #183457;
+  border: 1px solid #183457;
+} */
+/* 2. Product Image and Benefits */
+.product-image-benefits {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 2.1 Left Benefits */
+.product-benefits-left {
+  width: 25%;
+  text-align: right;
+  height: 50vh;
+  position: sticky;
+  top: 30%;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+
+.title_product_benefit_d {
+  font-size: 38px !important;
+  font-family: "Playfair Display", serif !important;
+}
+
+/* 2.2 Right Benefits */
+.product-benefits-right {
+  width: 25%;
+  height: 50vh;
+  position: sticky;
+  top: 30%;
+  align-items: center;
+  display: flex;
+  justify-content: start;
+}
+
+/* 2.1.1, 2.2.1 Benefits List */
+.benefits-product li {
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #183457;
+}
+
+/* 2.3 Product Image Div */
+.product-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 30%;
+  height: 50vh;
+  animation: moveUpDownBig 3s ease-in-out infinite;
+}
+@keyframes moveUpDownBig {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 2.3.1 Canvas id- #frame */
+canvas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3. Product Ingredients Div */
+.product-ingredients {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 2vh;
+  flex-wrap: nowrap;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.product-ingredients::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #aaaaaa00;
+}
+
+.product-ingredients::-webkit-scrollbar-thumb {
+  background-color: #bfbdbb62;
+  border-radius: 10px;
+}
+
+/* 3.1 Ingredient Card */
+.ingrdient-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  min-width: 300px;
+}
+
+/* 3.1.1 Ingredient card Image */
+.ingrdient-card img {
+  width: 300px;
+  animation: moveUpDown 2s ease-in-out infinite;
+  display: block;
+  border-radius: 5px;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.ingrdient-card img:hover {
+  animation: none;
+}
+/* 3.1.2 Ingredient Name */
+.ingredient-name {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #183457;
+}
+
+/* 3.1.2 Ingredient Indo */
+.ingredient-info {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(71, 71, 71);
+}
+
+/* 0. Pre-Order Div */
+.pre-order {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0%;
+  bottom: 94px;
+  z-index: 10000;
+}
+
+/* 0.1 Preorder button */
+.pre-order a {
+  text-decoration: none !important;
+  background-color: #183457;
+  color: white;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  border-radius: 3px 3px 3px 3px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.explore {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 57%;
+  z-index: 10000;
+  animation: moveUpDownText 2s ease-in-out infinite;
+}
+
+/* 0.1 Preorder button */
+.explore span {
+  text-decoration: none !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  color: #183457;
+  font-size: 18px;
+}
+
+@keyframes moveUpDownText {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.products-results {
+  height: 100vh;
+}
+
+/* MOBILE ***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
+
+/* Parent Container */
+.launch-page-container_m {
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Color-03.png?v=1735888470);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+/* 1. Title Div */
+/* .product-title_m {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* 1.1 Animated Tittle 
+.product-title_m h1 {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 8vh;
+  transition: font-size 0.3s ease;
+  color: #183457;
+} */
+
+
+.product-title_m {
+  height: 100vh;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+}
+
+.left-title_m{
+  border: 1px solid green;
+  width: 50%;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  justify-content:right;
+  align-items: center;
+}
+
+.right-title_m{
+  border: 1px solid green;
+  width: 50%;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  left: 50%;
+  justify-content:left;
+  align-items: center;
+}
+
+#animated-title_m{
+  font-weight: bold;
+  margin: 0;
+  /* position: fixed; */
+  /* transform: translate(-50%, -50%); */
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  transition: font-size 0.3s ease;
+  color: #183457;
+  border: 1px solid #183457;
+}
+
+/* 2. Product Image and Benefits */
+.product-image-benefits_m {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+}
+
+/* 2.1 Product Image Div */
+.product-image_m {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 10%;
+}
+
+/* 2.1.1 Canvas id- #frame */
+#frame_m {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2 Product Benefits List */
+.product-benefits-right_m {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits-product_m {
+  /* border: 1px solid red; */
+}
+.benefits-product_m li {
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #183457;
+  font-size: 18px;
+}
+
+/* 3. Product Ingredients Div */
+.product-ingredients_m {
+  margin-top: 50px;
+}
+.product-ingredients_m {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-bottom: 2vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.ingrdient-card_m {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  min-width: 300px;
+}
+
+/* 3.1 Ingredient Card */
+/* .ingrdient-card_m{
+    position: sticky;
+    top: 5%;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Body-butter-bg.jpg?v=1734950195);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10%;
+    background-attachment: fixed; 
+  } */
+
+/* 3.1.1 Ingredient card Image */
+.ingrdient-card_m img {
+  width: 250px;
+  height: 250px;
+  animation: moveUpDown 2s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 3.1.2 Ingredient Name */
+.ingredient-name_m {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #183457;
+}
+
+/* 3.1.2 Ingredient Indo */
+.ingredient-info_m {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+
+/* 0. Pre-Order Div */
+.pre-order_m {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 92px;
+  z-index: 10000;
+}
+
+/* 0.1 Preorder button */
+.pre-order_m a {
+  text-decoration: none !important;
+  background-color: #183457;
+  color: white;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 3px 3px 3px 3px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+.explore_m {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 55%;
+  z-index: 10000;
+  animation: moveUpDownText 2s ease-in-out infinite;
+}
+
+/* 0.1 Preorder button */
+.explore_m span {
+  text-decoration: none !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  color: #183457;
+  font-size: 16px;
+}
+
+@keyframes moveUpDownText {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.empty-div {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px !important;
+  z-index: 10000;
+}
+.empty-div a {
+  text-decoration: none !important;
+  background-color: #183457;
+  color: white;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 3px 3px 3px 3px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and (min-width: 1025px) {
+  .empty-div {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  .empty-div a {
+    text-decoration: none !important;
+    background-color: #183457;
+    color: white;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    border-radius: 3px 3px 3px 3px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-size: 15px;
+  }
+}
+
+.clean_m h2 {
+  margin-top: 40px;
+}
+
+.clean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clean h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  color: #183457;
+}
+
+@media (max-width: 768px) {
+  .clean {
+    display: flex;
+    align-items: center;
+  }
+
+  .clean h2 {
+    font-size: 24px;
+  }
+
+  .clean-reels h2 {
+    font-size: 22px;
+  }
+  .clean_m {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50px;
+  }
+
+  .clean_m h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #183457;
+    margin-top: 60px !important;
+  }
+}
+.product-ingredients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+}
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  overflow: hidden;
+}
+.card-list .card-item {
+  list-style: none;
+}
+.card-list .card-item .card-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+}
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #183457;
+}
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.card-wrapper .swiper-slide-button {
+  color: #183457;
+  margin-top: -35px;
+}
+.card-image {
+  width: 300px;
+  height: 200px;
+  animation: moveUpDown 2s ease-in-out infinite;
+  display: block;
+  border-radius: 5px;
+  padding-top: 5px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+.card-image:hover {
+  animation: none;
+}
+.ingredient-name {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #183457;
+}
+.ingredient-info {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(71, 71, 71);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px; 
+}
+
+
+
+@media only screen and (min-width: 769px) {
+  .div_1_M {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .div_1 {
+    display: none;
+  }
+}
+
+
+
+
+.clean_m h2 {
+  margin-top: 40px;
+}
+.in-cont-ing {
+  margin-top: 30px;
+}
+.in-cont {
+  margin-top: 70px;
+  padding-bottom: 40px;
+}
