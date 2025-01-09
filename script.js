@@ -406,43 +406,13 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".left-title_m", {
-    x: "-25vw",
-    ease: "power1.out",
-    fontSize: "28px",
-    scrollTrigger: {
-      trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
-      scrub: 1,
-      //   markers: true,
-
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const leftTitle = document.querySelector(".left-title_m h1");
-        if (leftTitle) {
-          
-
-          const minFontSize = 5; // Minimum font size in vh
-          const maxFontSize = 10; // Maximum font size in vh
-          const newFontSize =
-            maxFontSize - progress * (maxFontSize - minFontSize);
-          leftTitle.style.fontSize = `${newFontSize}vh`;
-        }
-      },
-    },
-  });
-
   tl_product_title_m.to(".right-title_m", {
-    x: "+25vw",
-    ease: "power1.out",
-    fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
-      scrub: 1,
-      //   markers: true,
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 5,
+      // markers: true,
 
       onUpdate: (self) => {
         const progress = self.progress;
@@ -453,16 +423,93 @@ function startAnimation_m() {
           } else {
             rightTitle.innerText = "NE?"; // Reset to original text before halfway
           }
-
-          const minFontSize = 5; // Minimum font size in vh
-          const maxFontSize = 10; // Maximum font size in vh
-          const newFontSize =
-            maxFontSize - progress * (maxFontSize - minFontSize);
-          rightTitle.style.fontSize = `${newFontSize}vh`;
         }
       },
     },
   });
+
+  tl_product_title_m.to(".left-title_m", {
+    x: "-50vw",
+    ease: "power1.out",
+    fontSize: "28px",
+    scrollTrigger: {
+      trigger: ".product-image_m",
+      start: "top 45%",
+      end: "top 30%",
+      scrub: 1,
+      //   markers: true,
+    },
+  });
+
+  tl_product_title_m.to(".right-title_m", {
+    x: "+50vw",
+    ease: "power1.out",
+    fontSize: "28px",
+    scrollTrigger: {
+      trigger: ".product-image_m",
+      start: "top 45%",
+      end: "top 30%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  //   tl_product_title_m.to(".left-title_m", {
+  //     x: "-25vw",
+  //     ease: "power1.out",
+  //     fontSize: "28px",
+  //     scrollTrigger: {
+  //       trigger: ".product-image_m",
+  //       start: "top 45%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //       //   markers: true,
+
+  //       onUpdate: (self) => {
+  //         const progress = self.progress;
+  //         const leftTitle = document.querySelector(".left-title_m h1");
+  //         if (leftTitle) {
+
+  //           const minFontSize = 5; // Minimum font size in vh
+  //           const maxFontSize = 10; // Maximum font size in vh
+  //           const newFontSize =
+  //             maxFontSize - progress * (maxFontSize - minFontSize);
+  //           leftTitle.style.fontSize = `${newFontSize}vh`;
+  //         }
+  //       },
+  //     },
+  //   });
+
+  //   tl_product_title_m.to(".right-title_m", {
+  //     x: "+25vw",
+  //     ease: "power1.out",
+  //     fontSize: "28px",
+  //     scrollTrigger: {
+  //       trigger: ".product-image_m",
+  //       start: "top 45%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //         markers: true,
+
+  //       onUpdate: (self) => {
+  //         const progress = self.progress;
+  //         const rightTitle = document.querySelector(".right-title_m h1");
+  //         if (rightTitle) {
+  //           if (progress > 0.5) {
+  //             rightTitle.innerText = "NO!"; // When progress is halfway or beyond
+  //           } else {
+  //             rightTitle.innerText = "NE?"; // Reset to original text before halfway
+  //           }
+
+  //           const minFontSize = 5; // Minimum font size in vh
+  //           const maxFontSize = 10; // Maximum font size in vh
+  //           const newFontSize =
+  //             maxFontSize - progress * (maxFontSize - minFontSize);
+  //           rightTitle.style.fontSize = `${newFontSize}vh`;
+  //         }
+  //       },
+  //     },
+  //   });
 
   //   tl_product_title_m.to("#animated-title_m ", {
 
