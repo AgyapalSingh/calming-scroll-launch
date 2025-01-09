@@ -268,17 +268,40 @@ function preloadImages_m() {
 }
 
 function loadImage_m(index) {
+  // if (index >= 0 && index < frames_m.maxIndex) {
+  //   const img_m = images_m[index];
+  //   canvas_m.width = window.innerWidth;
+  //   canvas_m.height = window.innerHeight / 1.8;
+  //   const scaleX_m = canvas_m.width / img_m.width;
+  //   const scaleY_m = canvas_m.height / img_m.height;
+  //   const scale_m = 0.4;
+  //   const newWidth_m = img_m.width * scale_m;
+  //   const newHeight_m = img_m.height * scale_m;
+  //   const offsetX_m = (canvas_m.width - newWidth_m) / 2;
+  //   const offsetY_m = (canvas_m.height - newHeight_m) / 2;
+  //   context_m.clearRect(0, 0, canvas_m.width, canvas_m.height);
+  //   context_m.imageSmoothingEnabled = true;
+  //   context_m.imageSmoothingQuality = "high";
+  //   context_m.drawImage(img_m, offsetX_m, offsetY_m, newHeight_m, newHeight_m);
+  //   frames_m.currentIndex = index;
+  // }
+
   if (index >= 0 && index < frames_m.maxIndex) {
     const img_m = images_m[index];
     canvas_m.width = window.innerWidth;
-    canvas_m.height = window.innerHeight / 1.8;
+    canvas_m.height = window.innerHeight;
+    ;
     const scaleX_m = canvas_m.width / img_m.width;
     const scaleY_m = canvas_m.height / img_m.height;
-    const scale_m = 0.4;
+    // const scale_m = 0.4;
+    const scale_m = Math.min(scaleX_m, scaleY_m);
+
     const newWidth_m = img_m.width * scale_m;
     const newHeight_m = img_m.height * scale_m;
+
     const offsetX_m = (canvas_m.width - newWidth_m) / 2;
     const offsetY_m = (canvas_m.height - newHeight_m) / 2;
+
     context_m.clearRect(0, 0, canvas_m.width, canvas_m.height);
     context_m.imageSmoothingEnabled = true;
     context_m.imageSmoothingQuality = "high";
@@ -291,10 +314,10 @@ function startAnimation_m() {
   tl_product_title_m = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image_m ",
-      start: "top 80%",
+      start: "top 40%",
       end: "top 20%",
       scrub: 1,
-      //   markers: true
+      // markers: true
     },
   });
 
@@ -326,8 +349,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 35%",
+      end: "top 20%",
       scrub: 1,
       //   markers: true,
     },
@@ -339,8 +362,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 35%",
+      end: "top 20%",
       scrub: 1,
       // markers: true,
     },
@@ -363,9 +386,9 @@ function startAnimation_m() {
     scrollTrigger: {
       trigger: ".benefits-product_m li",
       start: "top 75%",
-      end: "top 55%",
+      end: "top 45%",
       scrub: 1,
-      // markers: true,
+      markers: true,
     },
   });
 
@@ -373,7 +396,7 @@ function startAnimation_m() {
     y: -300,
     scrollTrigger: {
       trigger: ".benefits-product_m li",
-      start: "top 53%",
+      start: "top 40%",
       end: "top 30%",
       scrub: 1,
       // markers: true
