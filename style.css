@@ -388,6 +388,7 @@ canvas {
 
 .benefits-product_m {
   /* border: 1px solid red; */
+  margin-top: 20px;
 }
 .benefits-product_m li {
   text-decoration: none;
