@@ -396,7 +396,7 @@ canvas {
 } */
 
 
-.product-title_m {
+.calm_product-title_m {
   height: 100vh;
   overflow: hidden;
   /* border: 1px solid red; */
@@ -404,7 +404,7 @@ canvas {
   flex-direction: row;
 }
 
-.left-title_m{
+.calm_left-title_m{
   /* border: 1px solid green; */
   width: 50%;
   position: fixed;
@@ -414,7 +414,7 @@ canvas {
   align-items: center;
 }
 
-.right-title_m{
+.calm_right-title_m{
   /* border: 1px solid green; */
   width: 50%;
   position: fixed;
@@ -425,7 +425,7 @@ canvas {
   align-items: center;
 }
 
-#animated-title_m{
+#calm_animated-title_m{
   font-weight: bold;
   margin: 0;
   /* position: fixed; */

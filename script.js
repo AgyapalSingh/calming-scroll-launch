@@ -406,7 +406,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".right-title_m", {
+  tl_product_title_m.to(".calm_right-title_m", {
     scrollTrigger: {
       trigger: ".product-image_m",
       start: "top 85%",
@@ -416,7 +416,7 @@ function startAnimation_m() {
 
       onUpdate: (self) => {
         const progress = self.progress;
-        const rightTitle = document.querySelector(".right-title_m h1");
+        const rightTitle = document.querySelector(".calm_right-title_m h1");
         if (rightTitle) {
           if (progress > 0.5) {
             rightTitle.innerText = "NO!"; // When progress is halfway or beyond
@@ -428,7 +428,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".left-title_m", {
+  tl_product_title_m.to(".calm_left-title_m", {
     x: "-50vw",
     ease: "power1.out",
     fontSize: "28px",
@@ -441,7 +441,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".right-title_m", {
+  tl_product_title_m.to(".calm_right-title_m", {
     x: "+50vw",
     ease: "power1.out",
     fontSize: "28px",
