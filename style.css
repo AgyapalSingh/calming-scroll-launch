@@ -85,16 +85,20 @@
 }
 
 /* 1. Title Div */
-.product-title {
+.calm_product-title {
   height: 100vh;
   overflow: hidden;
-  border: 1px solid red;
+  /* border-left: 1px solid red;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red; */
   display: flex;
   flex-direction: row;
 }
 
-.left-title{
-  border: 1px solid green;
+.calm_left-title{
+  /* border-left: 1px solid rgb(0, 102, 5);
+  border-top: 1px solid rgb(0, 102, 5);
+  border-bottom: 1px solid rgb(0, 102, 5); */
   width: 50%;
   position: fixed;
   height: 100%;
@@ -103,8 +107,10 @@
   align-items: center;
 }
 
-.right-title{
-  border: 1px solid green;
+.calm_right-title{
+  /* border-right: 1px solid rgb(0, 102, 5);
+  border-top: 1px solid rgb(0, 102, 5);
+  border-bottom: 1px solid rgb(0, 102, 5); */
   width: 50%;
   position: fixed;
   height: 100%;
@@ -114,7 +120,7 @@
   align-items: center;
 }
 
-#animated-title{
+#calm_animated-title{
   font-weight: bold;
   margin: 0;
   /* position: fixed; */
@@ -123,7 +129,7 @@
   font-size: 15vh;
   transition: font-size 0.3s ease;
   color: #183457;
-  border: 1px solid #183457;
+  /* border: 1px solid #183457; */
 }
 
 /* Animated Tittle */

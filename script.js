@@ -169,34 +169,20 @@ function startAnimation() {
     },
   });
 
-  tl_product_title.to(".left-title", {
-    x: "-30vw",
-    ease: "power1.out",
+  tl_product_title.to(".calm_right-title", {
     scrollTrigger: {
       trigger: ".product-image",
-      start: "top 45%",
-      end: "top 30%",
-      scrub: 1,
-      //   markers: true
-    },
-  });
-
-  tl_product_title.to(".right-title", {
-    x: "+30vw",
-    ease: "power1.out",
-    scrollTrigger: {
-      trigger: ".product-image",
-      start: "top 45%",
-      end: "top 30%",
-      scrub: 1,
-      //   markers: true
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 5,
+      // markers: true,
 
       onUpdate: (self) => {
         const progress = self.progress;
-        const rightTitle = document.querySelector(".right-title h1");
+        const rightTitle = document.querySelector(".calm_right-title h1");
         if (rightTitle) {
           if (progress > 0.5) {
-            rightTitle.innerText = "NO"; // When progress is halfway or beyond
+            rightTitle.innerText = "NO!"; // When progress is halfway or beyond
           } else {
             rightTitle.innerText = "NE?"; // Reset to original text before halfway
           }
@@ -204,6 +190,68 @@ function startAnimation() {
       },
     },
   });
+
+  tl_product_title.to(".calm_left-title", {
+    x: "-50vw",
+    ease: "power1.out",
+    fontSize: "28px",
+    scrollTrigger: {
+      trigger: ".product-image",
+      start: "top 45%",
+      end: "top 30%",
+      scrub: 1,
+      //   markers: true,
+    },
+  });
+
+  tl_product_title.to(".calm_right-title", {
+    x: "+50vw",
+    ease: "power1.out",
+    fontSize: "28px",
+    scrollTrigger: {
+      trigger: ".product-image",
+      start: "top 45%",
+      end: "top 30%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  // tl_product_title.to(".left-title", {
+  //   x: "-100vw",
+  //   ease: "power1.out",
+  //   scrollTrigger: {
+  //     trigger: ".product-image",
+  //     start: "top 45%",
+  //     end: "top 30%",
+  //     scrub: 1,
+  //     //   markers: true
+  //   },
+  // });
+
+  // tl_product_title.to(".right-title", {
+  //   x: "+100vw",
+  //   ease: "power1.out",
+  //   scrollTrigger: {
+  //     trigger: ".product-image",
+  //     start: "top 45%",
+  //     end: "top 30%",
+  //     scrub: 1,
+  //     //   markers: true
+
+  //     onUpdate: (self) => {
+  //       const progress = self.progress;
+  //       const rightTitle = document.querySelector(".right-title h1");
+  //       if (rightTitle) {
+  //         if (progress > 0.5) {
+  //           rightTitle.innerText = "NO"; // When progress is halfway or beyond
+  //         } else {
+  //           rightTitle.innerText = "NE?"; // Reset to original text before halfway
+  //         }
+  //       }
+  //     },
+  //   },
+  // });
 
   tl_product_title.to(frames, {
     currentIndex: frames.maxIndex,
