@@ -20,7 +20,7 @@ document.onreadystatechange = function () {
 
 // DESKTOP       ===================================================================================================================================================
 
-var tl_product_title = gsap.timeline();
+var tl_product_title_calm = gsap.timeline();
 var tl_product_image = gsap.timeline();
 var tl_product_ingredient = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +76,7 @@ function loadImage(index) {
 }
 
 function startAnimation() {
-  tl_product_title = gsap.timeline({
+  tl_product_title_calm = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image ",
       start: "top 90%",
@@ -86,7 +86,7 @@ function startAnimation() {
     },
   });
 
-  tl_product_title.to(".calm_right-title", {
+  tl_product_title_calm.to(".calm_right-title", {
     scrollTrigger: {
       trigger: ".product-image",
       start: "top 85%",
@@ -108,7 +108,7 @@ function startAnimation() {
     },
   });
 
-  tl_product_title.to(".calm_left-title", {
+  tl_product_title_calm.to(".calm_left-title", {
     x: "-50vw",
     duration: 2.5,
     ease: "power1.out",
@@ -121,7 +121,7 @@ function startAnimation() {
     },
   });
 
-  tl_product_title.to(".calm_right-title", {
+  tl_product_title_calm.to(".calm_right-title", {
     x: "+50vw",
     duration: 2.5,
     ease: "power1.out",
@@ -134,13 +134,13 @@ function startAnimation() {
     },
   });
 
-  tl_product_title.to(frames, {
+  tl_product_title_calm.to(frames, {
     currentIndex: frames.maxIndex,
     onUpdate: function () {
       loadImage(Math.floor(frames.currentIndex));
     },
   });
-  tl_product_title.from(".benefits-product li", {
+  tl_product_title_calm.from(".benefits-product li", {
     y: 10,
     duration: 0.5,
     opacity: 0,
@@ -232,7 +232,7 @@ new Swiper(".card-wrapper", {
 
 // MOBILE       ===================================================================================================================================================
 
-var tl_product_title_m = gsap.timeline();
+var tl_product_title_m_calm = gsap.timeline();
 var tl_product_image_m = gsap.timeline();
 var tl_product_ingredient_m = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
@@ -288,7 +288,7 @@ function loadImage_m(index) {
 }
 
 function startAnimation_m() {
-  tl_product_title_m = gsap.timeline({
+  tl_product_title_m_calm = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image_m ",
       start: "top 80%",
@@ -298,7 +298,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".calm_right-title_m", {
+  tl_product_title_m_calm.to(".calm_right-title_m", {
     scrollTrigger: {
       trigger: ".product-image_m",
       start: "top 85%",
@@ -320,7 +320,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".calm_left-title_m", {
+  tl_product_title_m_calm.to(".calm_left-title_m", {
     x: "-50vw",
     ease: "power1.out",
     fontSize: "28px",
@@ -333,7 +333,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".calm_right-title_m", {
+  tl_product_title_m_calm.to(".calm_right-title_m", {
     x: "+50vw",
     ease: "power1.out",
     fontSize: "28px",
@@ -346,14 +346,14 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(frames_m, {
+  tl_product_title_m_calm.to(frames_m, {
     currentIndex: frames_m.maxIndex,
     onUpdate: function () {
       loadImage_m(Math.floor(frames_m.currentIndex));
     },
   });
 
-  tl_product_title_m.from(".benefits-product_m li", {
+  tl_product_title_m_calm.from(".benefits-product_m li", {
     y: 10,
     duration: 0.5,
     opacity: 0,
@@ -369,7 +369,7 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m.to(".product-image_m", {
+  tl_product_title_m_calm.to(".product-image_m", {
     y: -300,
     scrollTrigger: {
       trigger: ".benefits-product_m li",
