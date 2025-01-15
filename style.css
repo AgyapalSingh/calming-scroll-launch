@@ -602,8 +602,8 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -30px;
-    margin-top: 55%;
+    /* margin-bottom: -5px; */
+    margin-top: 60%;
   }
 
   .clean_m h2 {
