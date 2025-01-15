@@ -23,6 +23,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   color: #183457;
+  /* color: white; */
   margin-top: 20px;
 }
 
@@ -53,7 +54,7 @@
 
 /* Parent Container */
 .calm_launch-page-container {
-  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Color-03.png?v=1735888470);
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green.jpg?v=1736941077);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -95,6 +96,7 @@
   font-size: 15vh;
   transition: font-size 0.3s ease;
   color: #183457;
+  color: white;
 }
 
 
@@ -141,6 +143,7 @@
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #183457;
+  color: white;
 }
 
 /* 2.3 Product Image Div */
@@ -236,6 +239,7 @@ canvas {
   font-weight: bold;
   font-size: 14px;
   color: #183457;
+  color: white;
 }
 
 /* 3.1.2 Ingredient Indo */
@@ -244,6 +248,7 @@ canvas {
   text-align: center;
   font-size: 14px;
   color: rgb(71, 71, 71);
+  color: white;
 }
 
 /* 0. Pre-Order Div */
@@ -263,6 +268,7 @@ canvas {
 .pre-order a {
   text-decoration: none !important;
   background-color: #183457;
+  background-color: #2d380e;
   color: white;
   padding: 10px 50px;
   text-transform: uppercase;
@@ -291,6 +297,7 @@ canvas {
   font-family: "Poppins", sans-serif;
   color: #183457;
   font-size: 18px;
+  color: white;
 }
 
 @keyframes moveUpDownText {
@@ -311,7 +318,7 @@ canvas {
 
 /* Parent Container */
 .calm_launch-page-container_m {
-  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Color-03.png?v=1735888470);
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green.jpg?v=1736941077);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -353,6 +360,7 @@ canvas {
   font-size: 10vh;
   transition: font-size 0.3s ease;
   color: #183457;
+  color: white
 }
 
 /* 2. Product Image and Benefits */
@@ -403,6 +411,7 @@ canvas {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #183457;
+  color: white;
   font-size: 18px;
 }
 
@@ -457,6 +466,7 @@ canvas {
   font-weight: bold;
   font-size: 18px;
   color: #183457;
+  color: white;
 }
 
 /* 3.1.2 Ingredient Indo */
@@ -465,6 +475,7 @@ canvas {
   text-align: center;
   font-size: 14px;
   color: rgb(51, 51, 51);
+  color: rgb(226, 226, 226);
 }
 
 /* 0. Pre-Order Div */
@@ -483,6 +494,7 @@ canvas {
 .pre-order_m a {
   text-decoration: none !important;
   background-color: #183457;
+  background-color: #2d380e;
   color: white;
   padding: 10px 30px;
   text-transform: uppercase;
@@ -511,6 +523,7 @@ canvas {
   color: white;
   font-family: "Poppins", sans-serif;
   color: #183457;
+  color: white;
   font-size: 16px;
 }
 
@@ -583,6 +596,7 @@ canvas {
   font-family: "Playfair Display", serif;
   font-size: 38px;
   color: #183457;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -610,6 +624,7 @@ canvas {
     font-family: "Playfair Display", serif;
     font-size: 24px;
     color: #183457;
+    color: white;
     margin-top: 60px !important;
   }
 }
@@ -643,6 +658,7 @@ canvas {
   width: 13px;
   opacity: 0.5;
   background: #183457;
+  background: white
 }
 .card-wrapper .swiper-pagination-bullet-active {
   opacity: 1;
@@ -681,18 +697,22 @@ canvas {
   font-weight: bold;
   font-size: 14px;
   color: #183457;
+  color: white;
 }
 .ingredient-info {
   margin-bottom: 10px;
   text-align: center;
   font-size: 14px;
   color: rgb(71, 71, 71);
+  color: white;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 30px; 
+  color: white;
 }
+
 
 
 
