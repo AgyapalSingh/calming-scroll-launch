@@ -378,16 +378,16 @@ function startAnimation_m() {
     },
   });
 
-  tl_product_title_m_calm.to(".product-image_m", {
-    y: -300,
-    scrollTrigger: {
-      trigger: ".benefits-product_m li",
-      start: "top 30%",
-      end: "top 10%",
-      scrub: 1,
-      // markers: true
-    },
-  });
+  // tl_product_title_m_calm.to(".product-image_m", {
+  //   y: -300,
+  //   scrollTrigger: {
+  //     trigger: ".benefits-product_m li",
+  //     start: "top 30%",
+  //     end: "top 10%",
+  //     scrub: 1,
+  //     // markers: true
+  //   },
+  // });
 }
 
 preloadImages_m();
