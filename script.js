@@ -392,19 +392,19 @@ function startAnimation_m() {
 
 preloadImages_m();
 
-tl_product_ingredient_m.from(".ingrdient-card_m", {
-  y: 10,
-  duration: 0.5,
-  opacity: 0,
-  delay: 1,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".ingrdient-card_m",
-    start: "top 60%",
-    end: "top 40%",
-    scrub: 1,
-  },
-});
+// tl_product_ingredient_m.from(".ingrdient-card_m", {
+//   y: 10,
+//   duration: 0.5,
+//   opacity: 0,
+//   delay: 1,
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".ingrdient-card_m",
+//     start: "top 60%",
+//     end: "top 40%",
+//     scrub: 1,
+//   },
+// });
 
 gsap.from(".pre-order_m", {
   opacity: 0,
