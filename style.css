@@ -153,6 +153,7 @@
   top: 30%;
   height: 50vh;
   animation: moveUpDownBig 3s ease-in-out infinite;
+  /* border: 1px solid #183457; */
 }
 @keyframes moveUpDownBig {
   0%,
@@ -170,6 +171,8 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 10px solid red; */
+  /* height: 100vh; */
 }
 
 /* 3. Product Ingredients Div */
@@ -367,7 +370,8 @@ canvas {
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 10%;
+  top: -70%;
+  /* border: 1px solid red; */
 }
 
 /* 2.1.1 Canvas id- #frame */
@@ -384,6 +388,8 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 1px solid red; */
+  height: 50vh;
 }
 
 .benefits-product_m {
@@ -402,7 +408,9 @@ canvas {
 
 /* 3. Product Ingredients Div */
 .product-ingredients_m {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  /* border: 1px solid green; */
+
 }
 .product-ingredients_m {
   display: flex;
@@ -594,7 +602,8 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -50px;
+    margin-bottom: -30px;
+    margin-top: 55%;
   }
 
   .clean_m h2 {

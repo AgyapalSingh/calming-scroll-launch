@@ -30,7 +30,7 @@ const context = canvas.getContext("2d");
 
 const frames = {
   currentIndex: 0,
-  maxIndex: 27,
+  maxIndex: 65,
 };
 
 let imagesLoaded = 0;
@@ -39,10 +39,19 @@ const images = [];
 
 function preloadImages() {
   for (var i = 0; i < frames.maxIndex; i++) {
-    const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BodyButter${i
-      .toString()
-      .padStart(3, "0")}.png?v=1735800447`;
+    // const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BodyButter${i
+    //   .toString()
+    //   .padStart(3, "0")}.png?v=1735800447`;
+
+    //   https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM00.png?v=1736934344
+
+      const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM${i
+        .toString()
+        .padStart(2, "0")}.png?v=1736934344`;
+
+
     const img = new Image();
+    console.log(imageUrl);
     img.src = imageUrl;
     img.onload = () => {
       imagesLoaded++;
@@ -62,11 +71,11 @@ function loadImage(index) {
     canvas.height = window.innerHeight;
     const scaleX = canvas.width / img.width;
     const scaleY = canvas.height / img.height;
-    const scale = 1.2;
+    const scale = 0.9;
     const newWidth = img.width * scale;
     const newHeight = img.height * scale;
-    const offsetX = (canvas.width - newWidth) / 2;
-    const offsetY = (canvas.height - newHeight) / 2;
+    const offsetX = (canvas.width - newWidth) /2;
+    const offsetY = (canvas.height - newHeight)/2 ;
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
@@ -79,10 +88,10 @@ function startAnimation() {
   tl_product_title_calm = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image ",
-      start: "top 90%",
-      end: "top 20%",
+      start: "top 55%",
+      end: "top 5%",
       scrub: 1,
-      //   markers: true,
+        // markers: true,
     },
   });
 
@@ -114,10 +123,10 @@ function startAnimation() {
     ease: "power1.out",
     scrollTrigger: {
       trigger: ".product-image",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 30%",
+      end: "top 15%",
       scrub: 1,
-      //   markers: true,
+        // markers: true,
     },
   });
 
@@ -127,8 +136,8 @@ function startAnimation() {
     ease: "power1.out",
     scrollTrigger: {
       trigger: ".product-image",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 30%",
+      end: "top 15%",
       scrub: 1,
       // markers: true,
     },
@@ -242,7 +251,7 @@ const context_m = canvas_m.getContext("2d");
 
 const frames_m = {
   currentIndex: 0,
-  maxIndex: 27,
+  maxIndex: 65,
 };
 
 let imagesLoaded_m = 0;
@@ -251,9 +260,9 @@ const images_m = [];
 
 function preloadImages_m() {
   for (var i = 0; i < frames_m.maxIndex; i++) {
-    const imageUrl_m = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BodyButter${i
-      .toString()
-      .padStart(3, "0")}.png?v=1735800447`;
+    const imageUrl_m = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM${i
+        .toString()
+        .padStart(2, "0")}.png?v=1736934344`;
     const img_m = new Image();
     img_m.src = imageUrl_m;
     img_m.onload = () => {
@@ -271,10 +280,10 @@ function loadImage_m(index) {
   if (index >= 0 && index < frames_m.maxIndex) {
     const img_m = images_m[index];
     canvas_m.width = window.innerWidth;
-    canvas_m.height = window.innerHeight / 1.8;
+    canvas_m.height = window.innerHeight / 1.1;
     const scaleX_m = canvas_m.width / img_m.width;
     const scaleY_m = canvas_m.height / img_m.height;
-    const scale_m = 0.4;
+    const scale_m = 0.5 ;
     const newWidth_m = img_m.width * scale_m;
     const newHeight_m = img_m.height * scale_m;
     const offsetX_m = (canvas_m.width - newWidth_m) / 2;
@@ -291,10 +300,10 @@ function startAnimation_m() {
   tl_product_title_m_calm = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image_m ",
-      start: "top 80%",
-      end: "top 20%",
+      start: "top 25%",
+      end: "top 0%",
       scrub: 1,
-      //   markers: true
+        // markers: true
     },
   });
 
@@ -326,8 +335,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 20%",
+      end: "top 0%",
       scrub: 1,
       //   markers: true,
     },
@@ -339,8 +348,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 45%",
-      end: "top 30%",
+      start: "top 20%",
+      end: "top 0%",
       scrub: 1,
       // markers: true,
     },
@@ -373,8 +382,8 @@ function startAnimation_m() {
     y: -300,
     scrollTrigger: {
       trigger: ".benefits-product_m li",
-      start: "top 53%",
-      end: "top 30%",
+      start: "top 30%",
+      end: "top 10%",
       scrub: 1,
       // markers: true
     },
