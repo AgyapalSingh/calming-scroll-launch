@@ -1,4 +1,8 @@
 //  Manual JS for Launch Page - AgyaAujla
+// document.addEventListener('contextmenu', event => {
+//   event.preventDefault();
+// });
+
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
