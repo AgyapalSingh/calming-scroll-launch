@@ -331,13 +331,14 @@ function loadImage_m(index) {
     // frames_m.currentIndex = index;
 
     const img_m = images_m[index];
-    canvas_m.width = 300;
+    // canvas_m.width = 300;
     canvas_m.height = 500;
 
 
     const scaleX_m = canvas_m.width / img_m.width;
     const scaleY_m = canvas_m.height / img_m.height;
 
+    // const scale_m = 0.5;
     const scale_m = Math.max(scaleX_m, scaleY_m);
 
     const newWidth_m = img_m.width * scale_m;
