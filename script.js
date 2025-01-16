@@ -45,10 +45,11 @@ function preloadImages() {
 
     //   https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM00.png?v=1736934344
 
-      const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM${i
+      const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_${i
         .toString()
-        .padStart(2, "0")}.png?v=1736934344`;
+        .padStart(3, "0")}.png?v=1737009142`;
 
+        // https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_054.png?v=1737009142
 
     const img = new Image();
     // console.log(imageUrl);
@@ -86,7 +87,7 @@ function loadImage(index) {
   if(index >= 0 && index < frames.maxIndex) {
     const img = images[index];
     // canvas.width = window.innerWidth;
-    canvas.width = 600 ;
+    canvas.width = 300 ;
     canvas.height = 600;
     // console.log(canvas.width);
     // console.log(img.width);
@@ -295,9 +296,9 @@ const images_m = [];
 
 function preloadImages_m() {
   for (var i = 0; i < frames_m.maxIndex; i++) {
-    const imageUrl_m = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM${i
-        .toString()
-        .padStart(2, "0")}.png?v=1736934344`;
+    const imageUrl_m = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_${i
+      .toString()
+      .padStart(3, "0")}.png?v=1737009142`;
     const img_m = new Image();
     img_m.src = imageUrl_m;
     img_m.onload = () => {
@@ -313,20 +314,42 @@ function preloadImages_m() {
 
 function loadImage_m(index) {
   if (index >= 0 && index < frames_m.maxIndex) {
+    // const img_m = images_m[index];
+    // canvas_m.width = window.innerWidth;
+    // canvas_m.height = window.innerHeight / 1.1;
+    // const scaleX_m = canvas_m.width / img_m.width;
+    // const scaleY_m = canvas_m.height / img_m.height;
+    // const scale_m = 0.5 ;
+    // const newWidth_m = img_m.width * scale_m;
+    // const newHeight_m = img_m.height * scale_m;
+    // const offsetX_m = (canvas_m.width - newWidth_m) / 2;
+    // const offsetY_m = (canvas_m.height - newHeight_m) / 2;
+    // context_m.clearRect(0, 0, canvas_m.width, canvas_m.height);
+    // context_m.imageSmoothingEnabled = true;
+    // context_m.imageSmoothingQuality = "high";
+    // context_m.drawImage(img_m, offsetX_m, offsetY_m, newHeight_m, newHeight_m);
+    // frames_m.currentIndex = index;
+
     const img_m = images_m[index];
-    canvas_m.width = window.innerWidth;
-    canvas_m.height = window.innerHeight / 1.1;
+    canvas_m.width = 300;
+    canvas_m.height = 500;
+
+
     const scaleX_m = canvas_m.width / img_m.width;
     const scaleY_m = canvas_m.height / img_m.height;
-    const scale_m = 0.5 ;
+
+    const scale_m = Math.max(scaleX_m, scaleY_m);
+
     const newWidth_m = img_m.width * scale_m;
     const newHeight_m = img_m.height * scale_m;
+
     const offsetX_m = (canvas_m.width - newWidth_m) / 2;
     const offsetY_m = (canvas_m.height - newHeight_m) / 2;
+
     context_m.clearRect(0, 0, canvas_m.width, canvas_m.height);
     context_m.imageSmoothingEnabled = true;
     context_m.imageSmoothingQuality = "high";
-    context_m.drawImage(img_m, offsetX_m, offsetY_m, newHeight_m, newHeight_m);
+    context_m.drawImage(img_m, offsetX_m, offsetY_m, newWidth_m, newHeight_m);
     frames_m.currentIndex = index;
   }
 }
