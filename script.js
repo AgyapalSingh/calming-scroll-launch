@@ -203,19 +203,19 @@ function startAnimation() {
 
 preloadImages();
 
-tl_product_ingredient.from(".ingrdient-card", {
-  y: 10,
-  duration: 0.5,
-  opacity: 0,
-  delay: 1,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".ingrdient-card",
-    start: "top 65%",
-    end: "top 50%",
-    scrub: 1,
-  },
-});
+// tl_product_ingredient.from(".ingrdient-card", {
+//   y: 10,
+//   duration: 0.5,
+//   opacity: 0,
+//   delay: 1,
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".ingrdient-card",
+//     start: "top 65%",
+//     end: "top 50%",
+//     scrub: 1,
+//   },
+// });
 
 gsap.from(".pre-order", {
   opacity: 0,
