@@ -52,7 +52,7 @@
 
 /* Parent Container */
 .calm_launch-page-container {
-  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green.jpg?v=1736941077);
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green_1.jpg?v=1737008593);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +102,6 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  border:  1px solid green;
 }
 
 /* 2.1 Left Benefits */
@@ -154,7 +153,6 @@
   top: 30%;
   height: 50vh;
   animation: moveUpDownBig 3s ease-in-out infinite;
-  /* border: 1px solid #183457; */
 }
 @keyframes moveUpDownBig {
   0%,
@@ -168,14 +166,9 @@
 
 /* 2.3.1 Canvas id- #frame */
 canvas {
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 600px;
-  width: 600px; */
-  /* border: 10px solid red; */
-  /* height: 100vh; */
 }
 
 /* 3. Product Ingredients Div */
@@ -201,156 +194,29 @@ canvas {
   border-radius: 10px;
 }
 
-/* 3.1 Ingredient Card */
-.ingrdient-card {
+.you-get {
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-family: "Poppins", sans-serif;
-  min-width: 300px;
-}
-
-/* 3.1.1 Ingredient card Image */
-.ingrdient-card img {
-  width: 300px;
-  animation: moveUpDown 2s ease-in-out infinite;
-  display: block;
-  border-radius: 5px;
-}
-
-@keyframes moveUpDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-}
-
-.ingrdient-card img:hover {
-  animation: none;
-}
-/* 3.1.2 Ingredient Name */
-.ingredient-name {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  color: #183457;
-  color: white;
-}
-
-/* 3.1.2 Ingredient Indo */
-.ingredient-info {
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 14px;
-  color: rgb(71, 71, 71);
-  color: white;
-}
-
-/* 0. Pre-Order Div */
-.pre-order {
   width: 100%;
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 0%;
-  bottom: 94px;
-  z-index: 10000;
+  height: 10vh;
 }
 
-/* 0.1 Preorder button */
-.pre-order a {
-  text-decoration: none !important;
-  background-color: #183457;
-  background-color: #2d380e;
-  padding: 10px 50px;
-  text-transform: uppercase;
-  border-radius: 3px 3px 3px 3px;
-  font-family: "Poppins", sans-serif;
-  color: white;
-  background-color: #e3e898;
-  color: #3b4322;
-}
-
-.explore {
-  width: 100%;
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  top: 57%;
-  z-index: 10000;
-  animation: moveUpDownText 2s ease-in-out infinite;
-}
-
-/* 0.1 Preorder button */
-.explore span {
-  text-decoration: none !important;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  color: #183457;
-  font-size: 18px;
-  color: white;
-}
-
-@keyframes moveUpDownText {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.products-results {
-  height: 100vh;
-}
-
-
-
-
-.clean {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.clean h2 {
+.you-get h2 {
   font-family: "Playfair Display", serif;
   font-size: 38px;
   color: #183457;
   color: white;
 }
 
-@media (max-width: 768px) {
-  .clean {
-    display: flex;
-    align-items: center;
-  }
 
-  .clean h2 {
-    font-size: 24px;
-  }
-
-  .clean-reels h2 {
-    font-size: 22px;
-  }
-}
 .product-ingredients {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
   margin-top: 60px;
+  margin-bottom: 30px;
 }
 .card-wrapper {
   max-width: 1100px;
@@ -367,7 +233,6 @@ canvas {
   user-select: none;
   border-radius: 12px;
   text-decoration: none;
-  border: 2px solid transparent;
   transition: 0.2s ease;
 }
 .card-wrapper .swiper-pagination-bullet {
@@ -430,6 +295,78 @@ canvas {
   color: white;
 }
 
+
+/* 0. Pre-Order Div */
+.pre-order {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0%;
+  bottom: 94px;
+  z-index: 10000;
+}
+
+/* 0.1 Preorder button */
+.pre-order a {
+  text-decoration: none !important;
+  background-color: #183457;
+  background-color: #2d380e;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  border-radius: 3px 3px 3px 3px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #e3e898;
+  color: #3b4322;
+}
+
+.explore {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 57%;
+  z-index: 10000;
+  animation: moveUpDownText 2s ease-in-out infinite;
+}
+
+/* 0.1 Preorder button */
+.explore span {
+  text-decoration: none !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  color: #183457;
+  font-size: 18px;
+  color: white;
+}
+
+@keyframes moveUpDownText {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .in-cont-ing {
   margin-top: 150px;
 }
@@ -447,7 +384,7 @@ canvas {
 
 /* Parent Container */
 .calm_launch-page-container_m {
-  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green.jpg?v=1736941077);
+  background-image: url(https://cdn.shopify.com/s/files/1/0589/0192/1956/files/BG_Green_1.jpg?v=1737008593);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
