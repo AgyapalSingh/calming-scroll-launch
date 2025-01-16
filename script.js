@@ -331,18 +331,26 @@ function loadImage_m(index) {
     // frames_m.currentIndex = index;
 
     const img_m = images_m[index];
-    // canvas_m.width = 300;
+    canvas_m.width = 300;
+    // console.log(canvas_m.width, "Canvas Width")
     canvas_m.height = 500;
+    // console.log(canvas_m.height, "Canvas Height")
 
 
     const scaleX_m = canvas_m.width / img_m.width;
+    // console.log(scaleX_m, "ScaleX")
     const scaleY_m = canvas_m.height / img_m.height;
+    // console.log(scaleY_m, "ScaleY")
 
     // const scale_m = 0.5;
     const scale_m = Math.max(scaleX_m, scaleY_m);
+    // console.log(scale_m, "Scale")
 
     const newWidth_m = img_m.width * scale_m;
+    // console.log(newWidth_m, "New width");
+
     const newHeight_m = img_m.height * scale_m;
+    // console.log(newHeight_m, "New Height")
 
     const offsetX_m = (canvas_m.width - newWidth_m) / 2;
     const offsetY_m = (canvas_m.height - newHeight_m) / 2;
@@ -350,7 +358,8 @@ function loadImage_m(index) {
     context_m.clearRect(0, 0, canvas_m.width, canvas_m.height);
     context_m.imageSmoothingEnabled = true;
     context_m.imageSmoothingQuality = "high";
-    context_m.drawImage(img_m, offsetX_m, offsetY_m, newWidth_m, newHeight_m);
+    // context_m.drawImage(img_m, offsetX_m, offsetY_m, newWidth_m, newHeight_m);
+    context_m.drawImage(img_m, offsetX_m, offsetY_m, 300, 500);
     frames_m.currentIndex = index;
   }
 }
@@ -359,8 +368,8 @@ function startAnimation_m() {
   tl_product_title_m_calm = gsap.timeline({
     scrollTrigger: {
       trigger: ".product-image_m ",
-      start: "top 25%",
-      end: "top 0%",
+      start: "top 45%",
+      end: "top 10%",
       scrub: 1,
         // markers: true
     },
@@ -397,7 +406,7 @@ function startAnimation_m() {
       start: "top 20%",
       end: "top 0%",
       scrub: 1,
-      //   markers: true,
+        // markers: true,
     },
   });
 
