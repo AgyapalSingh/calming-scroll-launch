@@ -403,8 +403,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 20%",
-      end: "top 0%",
+      start: "top 30%",
+      end: "top 15%",
       scrub: 1,
         // markers: true,
     },
@@ -416,8 +416,8 @@ function startAnimation_m() {
     fontSize: "28px",
     scrollTrigger: {
       trigger: ".product-image_m",
-      start: "top 20%",
-      end: "top 0%",
+      start: "top 30%",
+      end: "top 15%",
       scrub: 1,
       // markers: true,
     },
