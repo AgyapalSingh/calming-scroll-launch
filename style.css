@@ -58,7 +58,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   scroll-behavior: smooth;
 }
 
@@ -170,10 +170,12 @@
 
 /* 2.3.1 Canvas id- #frame */
 canvas {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* height: 600px;
+  width: 600px; */
   /* border: 10px solid red; */
   /* height: 100vh; */
 }
@@ -269,12 +271,13 @@ canvas {
   text-decoration: none !important;
   background-color: #183457;
   background-color: #2d380e;
-  color: white;
   padding: 10px 50px;
   text-transform: uppercase;
   border-radius: 3px 3px 3px 3px;
   font-family: "Poppins", sans-serif;
   color: white;
+  background-color: #e3e898;
+  color: #3b4322;
 }
 
 .explore {
@@ -502,6 +505,8 @@ canvas {
   font-family: "Poppins", sans-serif;
   color: white;
   font-size: 12px;
+  background-color: #e3e898;
+  color: #3b4322;
 }
 
 .explore_m {
@@ -734,7 +739,7 @@ canvas {
   margin-top: 40px;
 }
 .in-cont-ing {
-  margin-top: 30px;
+  margin-top: 150px;
 }
 .in-cont {
   margin-top: 70px;

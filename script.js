@@ -51,7 +51,7 @@ function preloadImages() {
 
 
     const img = new Image();
-    console.log(imageUrl);
+    // console.log(imageUrl);
     img.src = imageUrl;
     img.onload = () => {
       imagesLoaded++;
@@ -65,22 +65,57 @@ function preloadImages() {
 }
 
 function loadImage(index) {
-  if (index >= 0 && index < frames.maxIndex) {
+  // if (index >= 0 && index < frames.maxIndex) {
+  //   const img = images[index];
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  //   const scaleX = canvas.width / img.width;
+  //   const scaleY = canvas.height / img.height;
+  //   const scale = 0.9;
+  //   const newWidth = img.width * scale;
+  //   const newHeight = img.height * scale;
+  //   const offsetX = (canvas.width - newWidth) /2;
+  //   const offsetY = (canvas.height - newHeight)/2 ;
+  //   context.clearRect(0, 0, canvas.width, canvas.height);
+  //   context.imageSmoothingEnabled = true;
+  //   context.imageSmoothingQuality = "high";
+  //   context.drawImage(img, offsetX, offsetY, newHeight, newHeight);
+  //   frames.currentIndex = index;
+  // }
+
+  if(index >= 0 && index < frames.maxIndex) {
     const img = images[index];
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // canvas.width = window.innerWidth;
+    canvas.width = 600 ;
+    canvas.height = 600;
+    // console.log(canvas.width);
+    // console.log(img.width);
+    // canvas.height = window.innerHeight;
+    // console.log(canvas.height);
+    // console.log(img.height);
+    
     const scaleX = canvas.width / img.width;
+    // console.log(scaleX);
     const scaleY = canvas.height / img.height;
-    const scale = 0.9;
+    // console.log(scaleY);
+
+    const scale = Math.max(scaleX, scaleY);
+    // const scale = 0.9;
+
     const newWidth = img.width * scale;
     const newHeight = img.height * scale;
-    const offsetX = (canvas.width - newWidth) /2;
-    const offsetY = (canvas.height - newHeight)/2 ;
+
+    const offsetX = (canvas.width - newWidth) / 2;
+    const offsetY = (canvas.height - newHeight) / 2;
+
     context.clearRect(0, 0, canvas.width, canvas.height);
+
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = "high";
-    context.drawImage(img, offsetX, offsetY, newHeight, newHeight);
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(img, offsetX, offsetY, newWidth, newHeight);
     frames.currentIndex = index;
+
+  
   }
 }
 
