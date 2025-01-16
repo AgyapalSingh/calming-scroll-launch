@@ -31,12 +31,23 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .calm_launch-page-container {
     display: none;
   }
 }
 @media screen and (min-width: 1025px) {
+  .calm_launch-page-container_m {
+    display: none;
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  .calm_launch-page-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
   .calm_launch-page-container_m {
     display: none;
   }
