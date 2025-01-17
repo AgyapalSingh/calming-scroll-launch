@@ -135,6 +135,28 @@ function startAnimation() {
     },
   });
 
+  tl_product_title_calm.to(".calm_left-title", {
+    scrollTrigger: {
+      trigger: ".product-image",
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 5,
+      // markers: true,
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const leftTitle = document.querySelector(".calm_left-title h1");
+        if (leftTitle) {
+          if (progress > 0.5) {
+            leftTitle.innerText = "AC-";
+          } else {
+            leftTitle.innerText = "AC";
+          }
+        }
+      },
+    },
+  });
+
   tl_product_title_calm.to(".calm_right-title", {
     scrollTrigger: {
       trigger: ".product-image",
@@ -149,8 +171,10 @@ function startAnimation() {
         if (rightTitle) {
           if (progress > 0.5) {
             rightTitle.innerText = "NO!";
+            rightTitle.style.color = "#e3e898";
           } else {
             rightTitle.innerText = "NE?";
+            rightTitle.style.color = "#3b4322";
           }
         }
       },
