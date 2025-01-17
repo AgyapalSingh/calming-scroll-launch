@@ -3,7 +3,6 @@
 //   event.preventDefault();
 // });
 
-
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     // Show loader and hide launch pages
@@ -49,11 +48,11 @@ function preloadImages() {
 
     //   https://cdn.shopify.com/s/files/1/0589/0192/1956/files/CM00.png?v=1736934344
 
-      const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_${i
-        .toString()
-        .padStart(3, "0")}.png?v=1737009142`;
+    const imageUrl = `https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_${i
+      .toString()
+      .padStart(3, "0")}.png?v=1737009142`;
 
-        // https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_054.png?v=1737009142
+    // https://cdn.shopify.com/s/files/1/0589/0192/1956/files/Calming_Sunscreen_054.png?v=1737009142
 
     const img = new Image();
     // console.log(imageUrl);
@@ -88,17 +87,17 @@ function loadImage(index) {
   //   frames.currentIndex = index;
   // }
 
-  if(index >= 0 && index < frames.maxIndex) {
+  if (index >= 0 && index < frames.maxIndex) {
     const img = images[index];
     // canvas.width = window.innerWidth;
-    canvas.width = 300 ;
+    canvas.width = 300;
     canvas.height = 600;
     // console.log(canvas.width);
     // console.log(img.width);
     // canvas.height = window.innerHeight;
     // console.log(canvas.height);
     // console.log(img.height);
-    
+
     const scaleX = canvas.width / img.width;
     // console.log(scaleX);
     const scaleY = canvas.height / img.height;
@@ -116,11 +115,9 @@ function loadImage(index) {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = 'high';
+    context.imageSmoothingQuality = "high";
     context.drawImage(img, offsetX, offsetY, newWidth, newHeight);
     frames.currentIndex = index;
-
-  
   }
 }
 
@@ -131,7 +128,7 @@ function startAnimation() {
       start: "top 55%",
       end: "top 5%",
       scrub: 1,
-        // markers: true,
+      // markers: true,
     },
   });
 
@@ -187,10 +184,10 @@ function startAnimation() {
     ease: "power1.out",
     scrollTrigger: {
       trigger: ".product-image",
-      start: "top 30%",
-      end: "top 15%",
+      start: "top 35%",
+      end: "top 25%",
       scrub: 1,
-        // markers: true,
+      // markers: true,
     },
   });
 
@@ -200,8 +197,8 @@ function startAnimation() {
     ease: "power1.out",
     scrollTrigger: {
       trigger: ".product-image",
-      start: "top 30%",
-      end: "top 15%",
+      start: "top 35%",
+      end: "top 25%",
       scrub: 1,
       // markers: true,
     },
@@ -364,7 +361,6 @@ function loadImage_m(index) {
     canvas_m.height = 500;
     // console.log(canvas_m.height, "Canvas Height")
 
-
     const scaleX_m = canvas_m.width / img_m.width;
     // console.log(scaleX_m, "ScaleX")
     const scaleY_m = canvas_m.height / img_m.height;
@@ -399,7 +395,7 @@ function startAnimation_m() {
       start: "top 45%",
       end: "top 10%",
       scrub: 1,
-        // markers: true
+      // markers: true
     },
   });
 
@@ -434,7 +430,7 @@ function startAnimation_m() {
       start: "top 30%",
       end: "top 15%",
       scrub: 1,
-        // markers: true,
+      // markers: true,
     },
   });
 
