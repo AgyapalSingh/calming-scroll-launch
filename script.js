@@ -399,6 +399,28 @@ function startAnimation_m() {
     },
   });
 
+  tl_product_title_m_calm.to(".calm_left-title_m", {
+    scrollTrigger: {
+      trigger: ".product-image_m",
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 5,
+      // markers: true,
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const leftTitle_m = document.querySelector(".calm_left-title_m h1");
+        if (leftTitle_m) {
+          if (progress > 0.5) {
+            leftTitle_m.innerText = "AC-";
+          } else {
+            leftTitle_m.innerText = "AC";
+          }
+        }
+      },
+    },
+  });
+
   tl_product_title_m_calm.to(".calm_right-title_m", {
     scrollTrigger: {
       trigger: ".product-image_m",
@@ -413,8 +435,10 @@ function startAnimation_m() {
         if (rightTitle) {
           if (progress > 0.5) {
             rightTitle.innerText = "NO!";
+            rightTitle.style.color = "#e3e898";
           } else {
             rightTitle.innerText = "NE?";
+            rightTitle.style.color = "#3b4322";
           }
         }
       },
